@@ -15,11 +15,11 @@ provider "aws" {
 resource "aws_instance" "Ajay" {
   ami                    = "ami-01216e7612243e0ef"
   instance_type          = "t2.micro"
-  key_name               = "mumbai"
+  key_name               = "ansible"
   vpc_security_group_ids = [aws_security_group.ec2_security_group.id]
   user_data              = file("website.sh")
   tags = {
-    Name = "Aj-EC2"
+    Name = "Pranay-EC-2"
   }
 }
 
